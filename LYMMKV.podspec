@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
 
-  s.name         = "MMKV"
+  s.name         = "LYMMKV"
   s.version      = "1.0.22"
   s.summary      = "MMKV is a cross-platform key-value storage framework developed by WeChat."
 
   s.description  = <<-DESC
                       The MMKV, for Objective-C.
                       MMKV is an efficient, complete, easy-to-use mobile key-value storage framework used in the WeChat application.
-                      It can be a replacement for NSUserDefaults & SQLite.
+                      It can be a replacement for NSUserDefaults & SQLite.自用，fork至https://github.com/Tencent/MMKV
                    DESC
 
   s.homepage     = "https://github.com/Tencent/MMKV"
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
 
-  s.source       = { :git => "https://github.com/Tencent/MMKV.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/ButtFly/MMKV.git", :tag => "v#{s.version}" }
   s.source_files =  "iOS/MMKV/MMKV", "iOS/MMKV/MMKV/*.{h,mm,hpp}", "iOS/MMKV/MMKV/aes/*", "iOS/MMKV/MMKV/aes/openssl/*"
   s.public_header_files = "iOS/MMKV/MMKV/MMKV.h", "iOS/MMKV/MMKV/MMKVHandler.h"
 
@@ -29,6 +29,7 @@ Pod::Spec.new do |s|
     "CLANG_CXX_LANGUAGE_STANDARD" => "gnu++17",
     "CLANG_CXX_LIBRARY" => "libc++",
     "CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF" => "NO",
+    'DEFINES_MODULE' => 'YES',
   }
 
 end
