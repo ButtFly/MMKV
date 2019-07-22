@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LYMMKV"
-  s.version      = "1.0.22"
+  s.version      = "1.1.0"
   s.summary      = "MMKV is a cross-platform key-value storage framework developed by WeChat."
 
   s.description  = <<-DESC
